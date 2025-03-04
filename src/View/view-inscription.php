@@ -1,12 +1,6 @@
-<!DOCTYPE html>
-<html lang="fr">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../assets/css/inscription.css">
-    <title>Formulaire</title>
-</head>
+<?php
+include_once("../../templates/head.php");
+?>
 
 <body>
     <h1>Formulaire d'inscription</h1>
@@ -83,9 +77,9 @@
     <h2>Vous avez déjà un compte ?</h2>
     <a href="connexion.php">Connectez-vous</a>
 
-    <footer>
-        <p>© 2025 - Tous droits réservés</p>
-    </footer>
-</body>
+<?php
+include_once('../../templates/footer.php');
+?>
 
+</body>
 </html>
