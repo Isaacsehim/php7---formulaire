@@ -1,4 +1,5 @@
 <?php
+require_once('../../config.php');
 // Définition des regex pour la validation des champs
 $regex_name = "/^[a-zA-Z]+$/";
 $regex_pseudo = "/^[a-zA-Z0-9]+$/";
@@ -95,8 +96,40 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 	// Si aucun erreur, redirection vers la page de confirmation
 	if (empty($errors)) {
-		header('Location: confirmation.php');
-		exit;
+		$pdo = new PDO('mysql:host=' . DB_HOST . ';dbname=' . DB_NAME . ';charset=utf8', DB_USER, DB_PASS);
+		$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+		// var_dump($pdo);
+		// header('Location: ../../src/View/view-confirmation.php');
+		// exit;
+		$sql = "INSERT INTO
+		`76_users`(
+			`user_gender`,
+			`user_lastname`,
+			`user_firstname`,
+			`user_pseudo`,
+			`user_birthdate`,
+			`user_mail`,
+			`user_password`
+		)VALUES(
+			:gender,
+			:lastname,
+			:firstname,
+			:pseudo,
+			:birthdate,
+			:mail,
+			:password
+		);";
+		$stmt = $pdo->prepare($sql);
+		
+		$stmt->bindValue(":gender", $_POST["genre"], PDO::PARAM_STR);
+		$stmt->bindValue(":lastname", $_POST["nom"], PDO::PARAM_STR);
+		$stmt->bindValue(":firstname", $_POST["prenom"], PDO::PARAM_STR);
+		$stmt->bindValue(":pseudo", $_POST["pseudo"], PDO::PARAM_STR);
+		$stmt->bindValue(":birthdate", $_POST["date_naissance"], PDO::PARAM_STR);
+		$stmt->bindValue(":mail", $_POST["email"], PDO::PARAM_STR);
+		$stmt->bindValue(":password", $_POST["password"], PDO::PARAM_STR);
+
+		$stmt->execute();
 	}
 }
 ?>
