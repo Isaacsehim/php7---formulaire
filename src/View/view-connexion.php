@@ -43,6 +43,7 @@ include_once("../../templates/navbar.php");
         </script>
 
         <input class="submit" type="submit" value="Envoyer">
+        <span><?= $errors['connexion'] ?? '' ?></span>
     </form>
 
 <?php
