@@ -1,6 +1,9 @@
-<?php
+<?php 
 include_once "../../templates/head.php";
 ?>
+    <link rel="stylesheet" href="../../assets/css/inscription.css">
+    <title>Formulaire</title>
+</head>
 
 <body>
     

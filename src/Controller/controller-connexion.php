@@ -10,19 +10,6 @@ $regex_password = "/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$/";
 
 $errors = [];
 
-// Vérification si le formulaire a été soumis
-// if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-
-// 	$pdo = new PDO('mysql:host=' . DB_HOST . ';dbname=' . DB_NAME . ';charset=utf8', DB_USER, DB_PASS);
-// 	$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-// 	$sql = "SELECT * from 76_users where `user_mail` = :mail OR `user_password` = :password";
-
-// 	$stmt = $pdo->prepare($sql);
-// 	$stmt->bindValue(':mail', $_POST['email'], PDO::PARAM_STR);
-// 	$stmt->rowCount() == 0 ? $found = false : $found = true;
-// 	$pdo = '';
-
 // !--ajout condition si checkbox checked mettre en rouge les inputs mal renseigné--!
 
 

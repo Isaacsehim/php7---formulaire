@@ -1,0 +1,157 @@
+/* Style global du corps de la page */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    background: linear-gradient(-45deg, #00008B, #006400, #2F4F4F, #483D8B, #F70A8D, #00A6ED);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    min-height: 100vh;
+    padding: 2vh;
+}
+
+/* Animation du background */
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+/* Style de la navigation */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #a1a1a1;
+    border-radius: 10px;
+    padding: 1rem;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+/* Style des liens de navigation */
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Conteneur principal du profil */
+.profil-container {
+    background-color: black;
+    border: 0.2rem solid #efefef;
+    border-radius: 15px;
+    max-width: 90%;
+    width: 600px;
+    padding: 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* En-tête du profil */
+.profil-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+/* Avatar du profil */
+.profil-header img {
+    width: 20vw;
+    max-width: 80px;
+    height: auto;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+/* Boutons Follow et Message */
+.profil-actions {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.submit {
+    padding: 0.5rem 1rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: transform 0.2s ease-in-out;
+    font-size: 1rem;
+}
+
+.modifier, .deconnexion {
+    border-radius: 15px;
+}
+
+.modifier {
+    background-color: #0095f6;
+    color: white;
+}
+
+.deconnexion {
+    background-color: #efefef;
+    color: black;
+}
+
+.submit:hover {
+    transform: scale(1.04);
+    background: linear-gradient(145deg, #F70A8D, #00A6ED);
+}
+
+/* Section des statistiques */
+.stats {
+    display: flex;
+    justify-content: space-around;
+    font-size: clamp(0.8rem, 1.1vw, 1.1rem);
+    padding: 1rem 0;
+    flex-wrap: wrap;
+}
+
+.stats p {
+    margin: 0;
+    text-align: center;
+}
+
+/* Bio du profil */
+.bio {
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+/* Section des publications */
+.profil-posts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 10px;
+    background-color: #171717;
+    width: 100%;
+    border-radius: 10px;
+    color: #a1a1a1;
+    border: 2px solid white;
+    padding: 1rem;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.profil-posts img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    transition: transform 0.2s;
+}
+
+.profil-posts img:hover {
+    transform: scale(1.1);
+}

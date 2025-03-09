@@ -1,7 +1,10 @@
 
-<?php
-include_once('../../templates/head.php');
+<?php 
+include_once "../../templates/head.php";
 ?>
+    <link rel="stylesheet" href="../../assets/css/connexion.css">
+    <title>Formulaire</title>
+</head>
 
 <body>
     <h1>Formulaire d'inscription</h1>
