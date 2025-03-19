@@ -6,4 +6,4 @@ session_destroy();
 
 ?>
 
-<?php include_once("../../View/view/view-deconnexion.php"); ?>
+<?php include_once("../../src/View/view-deconnexion.php"); ?>

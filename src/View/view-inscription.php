@@ -117,7 +117,7 @@ include_once "../../templates/head.php";
         <p>En cliquant sur "Envoyer", vous acceptez les <a href="#">conditions d'utilisation</a> et la <a href="#">politique de confidentialité</a> de notre site.</p>
 
         <h2>Vous avez déjà un compte ?</h2>
-        <a href="connexion.php">Connectez-vous</a>
+        <a href="../../src/View/view-connexion.php">Connecter vous</a>
 
         <?php
         include_once '../../templates/footer.php';

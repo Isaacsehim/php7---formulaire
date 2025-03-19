@@ -1,4 +1,4 @@
 <?php
-header('location: ..\src\Controller\controller-inscription.php'); 
+header('location: ..\src\Controller\controller-connexion.php'); 
 exit;
 ?>

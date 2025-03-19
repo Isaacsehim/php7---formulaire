@@ -163,11 +163,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 		$stmt->execute();
 		// var_dump($pdo);
-		header('Location: ../../src/View/view-confirmation.php');
+		header('Location: ../../src/Controller/controller-confirmation.php');
 		exit;
 	}
 }
-
 
 ?>
 

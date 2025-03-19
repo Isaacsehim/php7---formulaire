@@ -1,4 +1,3 @@
-
 <?php 
 include_once "../../templates/head.php";
 ?>
@@ -47,6 +46,9 @@ include_once("../../templates/navbar.php");
 
         <input class="submit" type="submit" value="Envoyer">
         <span><?= $errors['connexion'] ?? '' ?></span>
+
+
+
     </form>
 
 <?php
